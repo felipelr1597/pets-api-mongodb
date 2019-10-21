@@ -6,5 +6,4 @@ deploy:
   api-key:
     secure: $HEROKU_API_KEY
   app: demo
-script:
- - echo "skipping tests"
+script: ant build
