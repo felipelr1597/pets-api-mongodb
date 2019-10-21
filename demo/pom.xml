@@ -49,6 +49,11 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		 <!-- YAML Parser ================================== -->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+        </dependency>
 		
 	
 	</dependencies>
