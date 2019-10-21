@@ -5,8 +5,8 @@ jdk:
 dist: trusty
  
 script: ant build
-before_install:
- - cd java
+#before_install:
+# - cd java
 
 deploy:
   provider: heroku
