@@ -1,0 +1,17 @@
+package com.example.demo.models.services;
+
+import java.util.List;
+
+import com.example.demo.models.entity.Pets;
+import com.example.demo.models.repository.IPetsRepository;
+
+public class PetsServiceImpl implements IPetsService{
+
+	private IPetsRepository petsDao;
+	
+	@Override
+	public List<Pets> findAll() {
+		return petsDao.findAll();
+	}
+
+}

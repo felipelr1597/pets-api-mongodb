@@ -1,0 +1,11 @@
+package com.example.demo.models.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.models.entity.Pets;
+
+public interface IPetsService{
+	public List<Pets> findAll();
+}

@@ -1,0 +1,22 @@
+package com.example.demo.models.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.models.entity.Pets;
+import com.example.demo.models.repository.IPetsRepository;
+
+@Service
+public class PetsServiceImpl implements IPetsService{
+
+	@Autowired
+	private IPetsRepository petsDao;
+	
+	@Override
+	public List<Pets> findAll() {
+		return petsDao.findAll();
+	}
+
+}

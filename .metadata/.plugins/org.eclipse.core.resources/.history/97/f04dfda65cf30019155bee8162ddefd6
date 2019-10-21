@@ -1,0 +1,11 @@
+package com.example.demo.models.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.demo.models.entity.Pets;
+
+@Repository
+public interface IPetsRepository extends MongoRepository<Pets, String> {
+	return repository.findBy_id(id);
+}
