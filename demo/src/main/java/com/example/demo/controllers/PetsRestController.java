@@ -34,6 +34,7 @@ public class PetsRestController {
 
 	@GetMapping("/pets")
 	public List<Pets> getAllPets(){
+		System.out.println("Hola Heroku y travis");
 		return petsDao.findAll();
 	}
 	
