@@ -143,4 +143,33 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+              	
+                
+                <target name="makedir">
+                  <mkdir dir="${build.dir}" />
+                  <mkdir dir="${test.report.dir}" />
+                </target>
+
+                <target name="compile" depends="clean, makedir">
+                  <javac srcdir="${src.dir}" destdir="${build.dir}">
+                    <classpath refid="junit.class.path" />
+                  </javac>
+                </target>
+
+                <target name="junit" depends="compile">
+                  <junit printsummary="on" fork="true" haltonfailure="yes">
+                    <classpath refid="junit.class.path" />
+                    <formatter type="xml" />
+                    <batchtest todir="${test.report.dir}">
+                      <fileset dir="${src.dir}">
+                        <include name="**/*Test*.java" />
+                      </fileset>
+                    </batchtest>
+                  </junit>
+                </target>
+
+                <target name="main" depends="compile, junit">
+                  <description>Main target</description>
+                </target>         	
+    
 </project>
