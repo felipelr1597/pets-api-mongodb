@@ -723,7 +723,7 @@
             var PetsService = /** @class */ (function () {
                 function PetsService(httpClient) {
                     this.httpClient = httpClient;
-                    this.urlEndPoint = 'https://pets-api-mongodb.herokuapp.com/api/pets';
+                    this.urlEndPoint = '/api/pets';
                 }
                 PetsService.prototype.getPets = function () {
                     return this.httpClient.get(this.urlEndPoint);

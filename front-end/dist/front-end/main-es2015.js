@@ -732,7 +732,7 @@ __webpack_require__.r(__webpack_exports__);
 let PetsService = class PetsService {
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.urlEndPoint = 'https://pets-api-mongodb.herokuapp.com/api/pets';
+        this.urlEndPoint = '/api/pets';
     }
     getPets() {
         return this.httpClient.get(this.urlEndPoint);
