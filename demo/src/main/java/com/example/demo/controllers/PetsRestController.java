@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.models.entity.Pets;
 import com.example.demo.models.repository.IPetsRepository;
 
-@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin(origins = {"https://pets-api-mongodb.herokuapp.com"})
 @RestController
 @EnableAutoConfiguration
 @RequestMapping("/api")
