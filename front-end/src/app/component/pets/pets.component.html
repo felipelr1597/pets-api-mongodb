@@ -1,0 +1,18 @@
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Breed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pet of pets">
+            <td>{{pet._id}}</td>
+            <td>{{pet.name}}</td>
+            <td>{{pet.species}}</td>
+            <td>{{pet.breed}}</td>
+        </tr>
+    </tbody>
+</table>
