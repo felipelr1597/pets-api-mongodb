@@ -6,7 +6,6 @@ import javax.validation.Valid;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.models.entity.Pets;
 import com.example.demo.models.repository.IPetsRepository;
 
-@CrossOrigin(origins = {"http://localhost:4200"})
+@CrossOrigin(origins = {"https://pets-api-mongodb.herokuapp.com"})
 @RestController
 @EnableAutoConfiguration
 @RequestMapping("/api")
