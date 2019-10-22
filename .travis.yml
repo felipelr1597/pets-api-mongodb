@@ -10,7 +10,7 @@ dist: trusty
 
 
 script:
- - package package -DskipTests
+ - mvn package -DskipTests
 
 deploy:
   provider: heroku
