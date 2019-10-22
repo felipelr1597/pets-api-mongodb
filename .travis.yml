@@ -9,7 +9,9 @@ dist: trusty
 # - cd java
 
 
+
 script:
+ - cd demo
  - mvn package -DskipTests
 
 deploy:
