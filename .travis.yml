@@ -4,13 +4,13 @@ jdk:
 
 dist: trusty
  
-script: ant build
+#script: ant build
 #before_install:
 # - cd java
 
 
 script:
- - package -DskipTests
+ - package package -DskipTests
 
 deploy:
   provider: heroku
