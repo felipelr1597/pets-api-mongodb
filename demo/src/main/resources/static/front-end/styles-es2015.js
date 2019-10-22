@@ -338,7 +338,7 @@ if (content.locals) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\angular-spring-mysql\front-end\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Users\felip\Desktop\backend with mongodb\pets-api-mongodb\front-end\src\styles.css */"./src/styles.css");
 
 
 /***/ })
