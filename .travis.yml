@@ -10,8 +10,8 @@ env:
   - ANGULAR_HOME=front-end
 
 before_install:
- - nvm install stable
- - nvm use stable
+ - nvm install 
+ - nvm use
  - if [[ "npm -v" != 6* ]] ; then npm i -g npm@6 ; fi
 
 install:
@@ -19,11 +19,10 @@ install:
  - npm install -g @angular/cli@1.0.0
 
 before_deploy:
- - npm --prefix ./front-end run build-travis
+ - npm --prefix front-end run build-travis
  - cp -r fron-end/dist/[*] demo/src/main/resources/static
 
 script:
- - cd demo
  - mvn package -DskipTests
 
 deploy:
