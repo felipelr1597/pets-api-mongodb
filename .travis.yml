@@ -8,7 +8,7 @@ dist: trusty
 before_install:
  - nvm install stable
  - nvm use stable
- - if [[ "npm -v" != 6* ]]; then npm i -g npm@6 fi
+ - if [[ "npm -v" != 6* ]] ; then npm i -g npm@6 ; fi
 
 install:
  - npm --prefix front-end run install-travis
