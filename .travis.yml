@@ -19,7 +19,7 @@ install:
  - npm install -g @angular/cli@1.0.0
 
 before_deploy:
- - npm --prefix "$ANGULAR_HOME" run build-travis
+ - npm --prefix ./front-end run build-travis
  - cp -r fron-end/dist/[*] demo/src/main/resources/static
 
 script:
