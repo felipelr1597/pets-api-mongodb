@@ -5,6 +5,10 @@ node_js: 12.11.1
 
 dist: trusty
 
+env:
+ global:
+  - ANGULAR_HOME=front-end
+
 before_install:
  - nvm install stable
  - nvm use stable
@@ -15,7 +19,7 @@ install:
  - npm install -g @angular/cli@1.0.0
 
 before_deploy:
- - npm --prefix /front-end run build-travis
+ - npm --prefix "$ANGULAR_HOME" run build-travis
  - cp -r fron-end/dist/[*] demo/src/main/resources/static
 
 script:
