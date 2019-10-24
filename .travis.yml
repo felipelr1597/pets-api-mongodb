@@ -21,7 +21,7 @@ install:
 before_deploy:
  - cd ..
  - npm --prefix front-end run build-travis
- - cp -r front-end/dist/front-end demo/src/main/resources/static/
+ - cp -r front-end/dist/* demo/src/main/resources/static
 
 script:
  - cd demo
