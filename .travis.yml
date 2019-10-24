@@ -27,6 +27,7 @@ before_deploy:
  - npm --prefix front-end run build-travis
  - cp -r front-end/dist/* demo/src/main/resources/static
  - pwd
+ 
 
 deploy:
   provider: heroku
