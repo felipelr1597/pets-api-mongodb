@@ -1,6 +1,10 @@
 language: java
 before_install:
 - chmod +x mvnw
+
+script:
+ - cd demo
+ 
 deploy:
   provider: heroku
   api-key:
