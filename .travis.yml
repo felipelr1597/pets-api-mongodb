@@ -22,7 +22,7 @@ before_deploy:
  - cd ..
  - npm --prefix front-end run build-travis
  - cp -r front-end/dist/* demo/src/main/resources/static
- - git add
+ - git add .
  - git commit -a
 
 script:
