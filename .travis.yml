@@ -1,33 +1,28 @@
 language: java
 jdk:
  - oraclejdk8
-node_js: 12.11.1
+node_js: 
+ - '12'
 
 dist: trusty
 
-env:
- global:
-  - ANGULAR_HOME=front-end
-
 before_install:
- - nvm install stable
- - nvm use stable
- - if [[ "npm -v" != 6* ]] ; then npm i -g npm@6 ; fi
+ - cd front-end
+ - npm install -g @angular/cli
 
 install:
- - npm --prefix front-end run install-travis
- - npm install -g @angular/cli@1.0.0
+ - npm install
  
- script:
+script:
+ - cd ..
  - cd demo
  - mvn package -DskipTests
 
-before_deploy:
+after_script:
  - cd ..
- - npm --prefix front-end run build-travis
- - cp -r front-end/dist/* demo/src/main/resources/static
- - pwd
- 
+ - cd front-end
+ - chmod +x publish-gh-pages.sh && ./publish-gh-pages.sh
+ - cd ..
 
 deploy:
   provider: heroku
