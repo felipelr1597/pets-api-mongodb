@@ -17,17 +17,16 @@ before_install:
 install:
  - npm --prefix front-end run install-travis
  - npm install -g @angular/cli@1.0.0
+ 
+ script:
+ - cd demo
+ - mvn package -DskipTests
 
 before_deploy:
  - cd ..
  - npm --prefix front-end run build-travis
  - cp -r front-end/dist/* demo/src/main/resources/static
- - git add demo/src/main/resources/static/front-end/index.html
- - git add demo/src/main/resources/static/front-end/main-es2015.82394fcd8096dc26b6a7.js 
-
-script:
- - cd demo
- - mvn package -DskipTests
+ - pwd
 
 deploy:
   provider: heroku
