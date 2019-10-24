@@ -22,6 +22,8 @@ before_deploy:
  - cd ..
  - npm --prefix front-end run build-travis
  - cp -r front-end/dist/* demo/src/main/resources/static
+ - git add demo/src/main/resources/static/front-end/index.html
+ - git add demo/src/main/resources/static/front-end/main-es2015.82394fcd8096dc26b6a7.js 
 
 script:
  - cd demo
