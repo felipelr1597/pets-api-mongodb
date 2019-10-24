@@ -20,8 +20,7 @@ script:
 
 after_script:
  - cd ..
- - cd front-end
- - chmod +x publish-gh-pages.sh && ./publish-gh-pages.sh
+ - chmod +x mvnw
  - cd ..
 
 deploy:
