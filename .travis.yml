@@ -15,6 +15,7 @@ script:
  - cd demo
  - mvn package -DskipTests
  - cd ..
+ - cd front-end
  
 deploy:
  provider: heroku
