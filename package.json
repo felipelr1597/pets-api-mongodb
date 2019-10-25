@@ -1,5 +1,5 @@
 {
-    "name": "pets-api-mongodb",
+    "name": "front-end",
     "version": "12.13.0",
     "scripts": {
         "ng": "ng",
