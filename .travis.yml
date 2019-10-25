@@ -19,6 +19,7 @@ install:
 
 before_deploy:
  - cd ..
+ - cd front-end
 
 script:
  - cd demo
