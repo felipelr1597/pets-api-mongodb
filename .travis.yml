@@ -17,12 +17,11 @@ before_install:
 install:
  - npm install -g @angular/cli@1.0.0
 
-before_deploy:
- - cd ..
- - cd front-end
+#before_deploy:
+
 
 script:
- - cd demo
+ #- cd demo
  - mvn package -DskipTests
 
 deploy:
