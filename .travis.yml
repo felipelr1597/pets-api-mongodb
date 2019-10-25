@@ -9,10 +9,8 @@ dist: trusty
 before_install:
  - cd front-end
  - npm install -g @angular/cli
-
-install:
  - npm install
- 
+
 script:
  - cd ..
  - cd demo
