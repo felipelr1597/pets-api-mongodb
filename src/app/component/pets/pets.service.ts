@@ -12,7 +12,7 @@ import { Cliente } from '../cliente/cliente';
 })
 export class PetsService {
 
-  private urlEndPoint: string = '/api/pets'
+  private urlEndPoint: string = 'https://pets-api-mongodb.herokuapp.com/api/pets'
   constructor(private httpClient: HttpClient) { 
 
   }
