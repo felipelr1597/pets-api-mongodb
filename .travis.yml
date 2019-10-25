@@ -12,8 +12,9 @@ before_install:
 
 script:
  - cd ..
+ - cd demo
  - mvn package -DskipTests
- 
+ - cd ..
  
 deploy:
  provider: heroku
