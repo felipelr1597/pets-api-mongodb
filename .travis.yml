@@ -12,13 +12,8 @@ before_install:
 
 script:
  - cd ..
- - cd demo
  - mvn package -DskipTests
  
-after_script:
- - cd ..
- - chmod +x mvnw
- - cd front-end
  
 deploy:
  provider: heroku
