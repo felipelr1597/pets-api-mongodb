@@ -12,13 +12,13 @@ before_install:
  
  
 
-#before_install:
-# - nvm install stable
-# - nvm use stable
-# - if [[ "npm -v" != 6* ]] ; then npm i -g npm@6 ; fi
+before_install:
+ - nvm install stable
+ - nvm use stable
+ - if [[ "npm -v" != 6* ]] ; then npm i -g npm@6 ; fi
 
-#install:
-# - npm install -g @angular/cli@1.0.0
+install:
+ - npm install -g @angular/cli@1.0.0
 
 #before_deploy:
 
