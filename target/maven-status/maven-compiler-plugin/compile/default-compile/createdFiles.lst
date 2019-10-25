@@ -1,0 +1,4 @@
+com\example\demo\DemoApplication.class
+com\example\demo\controllers\PetsRestController.class
+com\example\demo\models\entity\Pets.class
+com\example\demo\models\repository\IPetsRepository.class
